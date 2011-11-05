@@ -1,0 +1,16 @@
+class CreateDoctors < ActiveRecord::Migration
+  def change
+    create_table :doctors do |t|
+      t.string :first_name ,:limit=>20
+      t.string :last_name  ,:limit=>20
+      t.string :middle_initial ,:limit=>1
+      t.integer :user_id
+      t.string :home_phone  ,:limit=>13
+      t.string :office_phone ,:limit=>13
+      t.string :mobile_phone
+      t.string :email
+      t.string :title
+      t.timestamps
+    end
+  end
+end
